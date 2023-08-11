@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'lcp-lib'
+group = 'lcp.lib'
 version = '0.1.0'
 
 repositories {
