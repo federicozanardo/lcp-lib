@@ -1,4 +1,4 @@
-package exceptions.datastructures.queue;
+package lcp.lib.exceptions.datastructures.queue;
 
 public class QueueUnderflowException extends Exception {
     public QueueUnderflowException() {

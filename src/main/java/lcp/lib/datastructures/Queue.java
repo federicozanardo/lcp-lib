@@ -1,7 +1,7 @@
-package datastructures;
+package lcp.lib.datastructures;
 
-import exceptions.datastructures.queue.QueueOverflowException;
-import exceptions.datastructures.queue.QueueUnderflowException;
+import lcp.lib.exceptions.datastructures.queue.QueueOverflowException;
+import lcp.lib.exceptions.datastructures.queue.QueueUnderflowException;
 
 import java.util.ArrayList;
 

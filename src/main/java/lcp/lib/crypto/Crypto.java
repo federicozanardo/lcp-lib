@@ -1,4 +1,4 @@
-package crypto;
+package lcp.lib.crypto;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
