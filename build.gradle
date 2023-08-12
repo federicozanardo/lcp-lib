@@ -1,11 +1,9 @@
 plugins {
     id 'java'
-    //id 'maven-publish'
 }
 
-//group = 'lcp.lib'
 group = 'com.github.federicozanardo'
-version = '0.1.9'
+version = '0.1.10'
 
 repositories {
     mavenCentral()
