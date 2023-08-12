@@ -1,7 +1,7 @@
-package datastructures;
+package lcp.lib.datastructures;
 
-import exceptions.datastructures.stack.StackOverflowException;
-import exceptions.datastructures.stack.StackUnderflowException;
+import lcp.lib.exceptions.datastructures.stack.StackOverflowException;
+import lcp.lib.exceptions.datastructures.stack.StackUnderflowException;
 
 import java.util.ArrayList;
 
@@ -31,7 +31,7 @@ public class Stack<T> {
      * Push an element into the stack.
      *
      * @param value: value to be pushed in the stack.
-     * @throws StackOverflowException: throws when the current value exceed the stack space limit.
+     * @throws StackOverflowException : throws when the current value exceed the stack space limit.
      */
     public void push(T value) throws StackOverflowException {
         // Check if the stack is full
@@ -55,7 +55,7 @@ public class Stack<T> {
      * Return the last element and remove it from the stack.
      *
      * @return the last element from the stack.
-     * @throws StackUnderflowException: throws when someone tries to pop a value from an empty stack.
+     * @throws StackUnderflowException : throws when someone tries to pop a value from an empty stack.
      */
     public T pop() throws StackUnderflowException {
         // Check if the stack is empty

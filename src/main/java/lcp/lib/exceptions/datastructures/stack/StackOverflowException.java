@@ -1,4 +1,4 @@
-package exceptions.datastructures.stack;
+package lcp.lib.exceptions.datastructures.stack;
 
 public class StackOverflowException extends Exception {
     public StackOverflowException() {
