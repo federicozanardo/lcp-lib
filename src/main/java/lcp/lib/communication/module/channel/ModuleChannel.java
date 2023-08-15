@@ -41,10 +41,10 @@ public class ModuleChannel implements Mediator {
 
     @Override
     public void send(ChannelMessage message) {
-        logger.debug("[{}] from: {}, payload: {}", new Object(){}.getClass().getEnclosingMethod().getName(), message.senderModuleId(), message.channelMessagePayload());
+        logger.debug("[{}] from: {}, payload: {}", new Object(){}.getClass().getEnclosingMethod().getName(), message.getSenderModuleId(), message.getChannelMessagePayload());
 
         for (Module module : modules) {
-            if (!module.getId().equals(message.senderModuleId())) {
+            if (!module.getId().equals(message.getSenderModuleId())) {
                 module.receive(message);
             }
         }
@@ -52,11 +52,11 @@ public class ModuleChannel implements Mediator {
 
     @Override
     public ChannelMessage sendAndReceive(ChannelMessage message) {
-        logger.debug("[{}] from: {}, payload: {}", new Object(){}.getClass().getEnclosingMethod().getName(), message.senderModuleId(), message.channelMessagePayload());
+        logger.debug("[{}] from: {}, payload: {}", new Object(){}.getClass().getEnclosingMethod().getName(), message.getSenderModuleId(), message.getChannelMessagePayload());
         ChannelMessage result = null;
 
         for (Module module : modules) {
-            if (!module.getId().equals(message.senderModuleId())) {
+            if (!module.getId().equals(message.getSenderModuleId())) {
                 result = module.receiveAndResponse(message);
             }
         }

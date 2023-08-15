@@ -1,4 +1,13 @@
 package lcp.lib.communication.module.channel;
 
-public record ChannelMessage(String senderModuleId, ChannelMessagePayload channelMessagePayload) {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
+
+@AllArgsConstructor
+@Getter
+@ToString
+public class ChannelMessage {
+    private final String senderModuleId;
+    private final ChannelMessagePayload channelMessagePayload;
 }
