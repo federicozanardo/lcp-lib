@@ -14,7 +14,7 @@ public interface IDeterministicFiniteAutomata {
      * @param argumentTypes:      the argument types of the function called.
      * @return true, if the given state is the next state of the current state; false, otherwise.
      */
-    public boolean isNextState(String party, String functionName, DfaState candidateNextState, ArrayList<String> argumentTypes);
+    boolean isNextState(String party, String functionName, DfaState candidateNextState, ArrayList<String> argumentTypes);
 
     /**
      * Check if the given state is the next state of the current state, given an obligation function name.
@@ -23,7 +23,7 @@ public interface IDeterministicFiniteAutomata {
      * @param candidateNextState:     state to check if it is the next state of the current state.
      * @return true, if the given state is the next state of the current state; false, otherwise.
      */
-    public boolean isNextState(String obligationFunctionName, DfaState candidateNextState);
+    boolean isNextState(String obligationFunctionName, DfaState candidateNextState);
 
     /**
      * Update the state machine, given a party, a function name and a list of argument types.
@@ -32,12 +32,12 @@ public interface IDeterministicFiniteAutomata {
      * @param functionName:  the name of the function called.
      * @param argumentTypes: the argument types of the function called.
      */
-    public void nextState(String party, String functionName, ArrayList<String> argumentTypes);
+    void nextState(String party, String functionName, ArrayList<String> argumentTypes);
 
     /**
      * Update the state machine, given an obligation function name.
      *
      * @param obligationFunctionName: the name of the obligation function called.
      */
-    public void nextState(String obligationFunctionName);
+    void nextState(String obligationFunctionName);
 }
