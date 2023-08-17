@@ -1,9 +1,16 @@
 package lcp.lib.dfa.states;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.io.Serializable;
 import java.util.HashSet;
 
-public record FinalStates(HashSet<DfaState> acceptanceStates, HashSet<DfaState> failingStates) implements Serializable {
+@AllArgsConstructor
+@Getter
+public class FinalStates implements Serializable {
+    private final HashSet<DfaState> acceptanceStates;
+    private final HashSet<DfaState> failingStates;
 
     public boolean isStateInFinalStates(DfaState state) {
         return (acceptanceStates.contains(state) || failingStates.contains(state));
