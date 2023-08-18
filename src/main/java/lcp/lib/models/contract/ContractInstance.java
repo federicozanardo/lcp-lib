@@ -1,9 +1,9 @@
 package lcp.lib.models.contract;
 
 import lcp.lib.dfa.DeterministicFiniteAutomata;
+import lcp.lib.models.party.Party;
 import lcp.lib.models.vm.Type;
 import lombok.Getter;
-import models.party.Party;
 
 import java.io.Serializable;
 import java.util.HashMap;
