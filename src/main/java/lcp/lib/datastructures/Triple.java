@@ -1,7 +1,10 @@
 package lcp.lib.datastructures;
 
+import lombok.Getter;
+
 import java.io.Serializable;
 
+@Getter
 public class Triple<K, L, V> implements Serializable {
     private final K first;
     private final L second;
@@ -11,18 +14,6 @@ public class Triple<K, L, V> implements Serializable {
         this.first = first;
         this.second = second;
         this.third = third;
-    }
-
-    public K getFirst() {
-        return first;
-    }
-
-    public L getSecond() {
-        return second;
-    }
-
-    public V getThird() {
-        return third;
     }
 
     @Override
