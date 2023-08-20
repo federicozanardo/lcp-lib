@@ -9,5 +9,5 @@ import lombok.ToString;
 @ToString
 public class ChannelMessage {
     private final String senderModuleId;
-    private final ChannelMessagePayload channelMessagePayload;
+    private final ChannelMessagePayload payload;
 }
