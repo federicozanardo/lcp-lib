@@ -49,11 +49,11 @@ public abstract class Module {
         return null;
     }
 
-    public abstract void send(String receiverChannelId, ChannelMessagePayload payload);
+    public abstract void send(String receiverModuleId, ChannelMessagePayload payload);
 
     public abstract void receive(ChannelMessage message);
 
-    public abstract ChannelMessage sendAndReceive(String receiverChannelId, ChannelMessagePayload payload);
+    public abstract ChannelMessage sendAndReceive(String receiverModuleId, ChannelMessagePayload payload);
 
     public abstract ChannelMessage receiveAndResponse(ChannelMessage message);
 
