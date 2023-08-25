@@ -49,11 +49,32 @@ public abstract class Module {
         return null;
     }
 
-    public abstract void send(String receiverModuleId, ChannelMessagePayload payload);
+    public void send(String receiverModuleId, ChannelMessagePayload payload) {
+        logger.debug("[{}] payload: {}", new Object() {
+        }.getClass().getEnclosingMethod().getName(), payload);
+        ModuleChannel channel = this.findChannel(this.getId(), receiverModuleId);
+
+        if (channel != null) {
+            channel.send(new ChannelMessage(this.getId(), payload));
+        } else {
+            logger.error("Impossible to find a channel with {}!", receiverModuleId);
+        }
+    }
 
     public abstract void receive(ChannelMessage message);
 
-    public abstract ChannelMessage sendAndReceive(String receiverModuleId, ChannelMessagePayload payload);
+    public ChannelMessage sendAndReceive(String receiverModuleId, ChannelMessagePayload payload) {
+        logger.debug("[{}] payload: {}", new Object() {
+        }.getClass().getEnclosingMethod().getName(), payload);
+        ModuleChannel channel = this.findChannel(this.getId(), receiverModuleId);
+
+        if (channel != null) {
+            return channel.sendAndReceive(new ChannelMessage(this.getId(), payload));
+        } else {
+            logger.error("Impossible to find a channel with {}!", receiverModuleId);
+            return null;
+        }
+    }
 
     public abstract ChannelMessage receiveAndResponse(ChannelMessage message);
 
