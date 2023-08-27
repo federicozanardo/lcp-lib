@@ -1,5 +1,6 @@
 package lcp.lib.models.assets;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;
@@ -18,5 +19,6 @@ public class Asset implements Serializable {
     /**
      * Asset configuration.
      */
+    @JsonProperty("config")
     private final AssetConfig config;
 }
