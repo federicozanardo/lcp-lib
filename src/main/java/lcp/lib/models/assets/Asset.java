@@ -1,10 +1,14 @@
 package lcp.lib.models.assets;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.io.Serializable;
 
+@AllArgsConstructor
 @Getter
+@ToString
 public class Asset implements Serializable {
     /**
      * It consists of an alphanumeric string to uniquely refer to an asset.
@@ -14,18 +18,5 @@ public class Asset implements Serializable {
     /**
      * Asset configuration.
      */
-    private final AssetConfig asset;
-
-    public Asset(String id, AssetConfig asset) {
-        this.id = id;
-        this.asset = asset;
-    }
-
-    @Override
-    public String toString() {
-        return "Asset{" +
-                "id='" + id + '\'' +
-                ", asset=" + asset +
-                '}';
-    }
+    private final AssetConfig config;
 }
